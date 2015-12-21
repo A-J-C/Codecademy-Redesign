@@ -1,51 +1,32 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
+  "update_url": "https://clients2.google.com/service/update2/crx",
 
-	"manifest_version": 2,
+  "manifest_version": 2,
 
-	"name": "Codecademy Redesigned",
-	"description": "Improves your Experience on Codecademy, re-styling the Q&A forums into a sleeker look and adding many new useful feautres.",
-	"version": "6.1.1",
-	
-	"icons": { 
-		"16": "icon_16.png",
-		"48": "icon_48.png",
-		"128": "icon_128.png" 
-	},
+  "name": "Codecademy Redesigned",
+  "description": "Fixed bugs, new features, and restyled Q&A forums.",
+  "version": "7.0.3",
 
-	"permissions": [
-		"http://codecademy.com/"
-	],
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
 
-	"content_scripts": [ 
-	{
-		"all_frames": true,
-		"js": [ "jquery.min.js", "tutorials.js" ],
-		"matches": [ "http://www.codecademy.com/*", "https://www.codecademy.com/*" ]
-	},
-	{
-		"all_frames": true,
-		"js": [ "jquery.min.js", "addCount.js" ],
-		"matches": [ "http://www.codecademy.com/*", "https://www.codecademy.com/*" ]
-	},
-	{
-		"all_frames": true,
-		"js": [ "jquery.min.js", "profileUpdater.js" ],
-		"matches": [ "http://www.codecademy.com/*", "https://www.codecademy.com/*" ]
-	},
-	{
-		"all_frames": true,
-		"js": [ "jquery.min.js", "ForumLink.js" ],
-		"matches": [ "http://www.codecademy.com/forums/*", "https://www.codecademy.com/forums/*", "http://www.codecademy.com/forum_questions/*", "https://www.codecademy.com/forum_questions/*" ]
-	},
-	{
-		"all_frames": true,
-		"js": [ "jquery.min.js", "q&aUpdater.js" ],
-		"matches": [ "http://www.codecademy.com/forums/*", "https://www.codecademy.com/forums/*", "http://www.codecademy.com/forum_questions/*", "https://www.codecademy.com/forum_questions/*" ]
-	},
-	{
-        "all_frames": true,
-		"js": [ "jquery.min.js", "magic.js" ],
-		"matches": [ "http://www.codecademy.com/forums/*", "https://www.codecademy.com/forums/*", "http://www.codecademy.com/forum_questions/*", "https://www.codecademy.com/forum_questions/*" ]
-    } 	]
+  "permissions": ["https://.codecademy.com/"],
+
+  "content_scripts": [{
+    "run_at": "document_end",
+    "all_frames": true,
+    "js": ["jquery-1.11.1.js", "site-updater.js"],
+    "css": ["site-updater.css"],
+    "matches": ["*://codecademy.com/*", "*://www.codecademy.com/*"]
+  },
+  {
+    "run_at": "document_end",
+    "all_frames": true,
+    "js": ["jquery-1.11.1.js", "forum-updater.js"],
+    "css": ["forum-updater.css"],
+    "matches": ["*://discuss.codecademy.com/*"]
+  }]
 }

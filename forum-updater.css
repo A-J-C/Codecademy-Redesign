@@ -1,0 +1,228 @@
+/*******************
+Colors:
+
+Light Blue: #59A1C9
+Dark Blue: #1E3F57
+Green: #34B3A0
+Red: #F65A5B
+Gray 1: #F1F2F2
+Gray 2: #E6E7E8
+Gray 3: #BCBEC0
+Gray 4: #939598
+*******************/
+
+/* importing custom fonts */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oxygen Light'), local('Oxygen-Light'), url('https://fonts.gstatic.com/s/oxygen/v5/AwBqWF2kjhlybWamaKMPcVtXRa8TVwTICgirnJhmVJw.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url('https://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2ltXRa8TVwTICgirnJhmVJw.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://fonts.gstatic.com/s/oxygenmono/v4/BzV4DVOwAgGelLT9EC5xyo4P5ICox8Kq3LLUNMylGO4.woff2') format('woff2');
+}
+
+/* styles */
+.new-version > * {
+  z-index: 9999;
+}
+
+.new-version .popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1E3F57;
+  opacity: 0.95;
+}
+
+.new-version .popup-close {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-version .popup {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  width: 400px;
+  height: 230px;
+  background-color: #FAFAFA;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  padding: 15px;
+  margin: -115px 0 0 -200px;
+}
+
+.new-version .popup h1 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0px;
+  margin: 21px 0px;
+}
+
+.new-version .popup a {
+  color: #F65A5B;
+}
+
+.new-version .popup a:hover {
+  text-decoration: underline;
+}
+
+body, .user-main .user-stream .item {
+  background-color: #FAFAFA;
+}
+
+.topic-list > tbody > tr, .topic-list > tbody > tr:first-of-type, .topic-body, .topic-avatar, #topic-closing-info, hr, a.mention, blockquote, .quote .title {
+  border-color: #BCBEC0 !important;
+}
+
+.cooked code {
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.cooked img:not(.emoji), .cooked pre {
+  border: 1px solid #BCBEC0;
+}
+
+.cooked, textarea.wmd-input {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cooked h1, .cooked h2, .cooked h3, .cooked h4, .cooked h5, .cooked h6 {
+  color: #1E3F57;
+}
+
+.cooked p {
+  color: #4A4A4C !important;
+}
+
+.cooked a[href]:not(.mention) {
+  color: #F65A5B;
+}
+
+.cooked a[href]:not(.mention):hover {
+  text-decoration: underline;
+}
+
+.cooked .onebox header a[href], .cooked .onebox header a[href]:hover {
+  color: #4A4A4C;
+  text-decoration: none;
+}
+
+.cooked .quote .title a, .cooked .quote .title a:hover {
+  color: #59A1C9;
+  text-decoration: none;
+}
+
+.cooked p, .cooked ul, .cooked ol {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cooked ul li {
+  list-style: none;
+}
+
+.cooked ul li::before {
+  content: "- ";
+}
+
+.cooked .poll-container ul li::before {
+  content: "";
+}
+
+.expanded-quote .highlighted {
+  background-color: #59A1C9;
+  color: #FAFAFA;
+}
+
+.quote, blockquote {
+  border: 1px solid #BCBEC0;
+  border-left: 5px solid #BCBEC0;
+  margin: 0;
+}
+
+.quote blockquote, .quote .title {
+  border: 0 !important;
+}
+
+a.mention, blockquote, .quote .title, pre, code {
+  background-color: #E6E7E8 !important;
+}
+
+.quote-controls, nav.post-controls button {
+  color: #BCBEC0;
+  opacity: 1 !important
+}
+
+nav.post-controls button:not(button.like):hover {
+  background-color: #E6E7E8;
+}
+
+.wmd-button-bar.active {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 8px #34B3A0;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 8px #34B3A0;
+  border: 1px solid #34B3A0;
+  border-bottom: 1px solid #34B3A0 !important;
+  border-radius: 0 0 4px 4px;
+}
+
+.wmd-canned-response-button::before {
+  content: "\f044";
+}
+
+.canned-response-container {
+  display: inline-block;
+  width: 100%;
+  max-height: 75%;
+  height: auto;
+  overflow-y: auto;
+}
+
+.canned-response-container ul {
+  padding: 0 4px;
+  margin: 0;
+}
+
+.canned-response-container li {
+  min-height: 1em;
+  cursor: pointer;
+  list-style: none;
+  padding: 3px 7px 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+.canned-response-container li:hover, .select2-results li:hover {
+  background-color: #F1F2F2;
+}
+
+.canned-response-container li a {
+  color: #4080AC;
+}
