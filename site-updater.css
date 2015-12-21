@@ -1,0 +1,80 @@
+/*******************
+Colors:
+
+Light Blue: #59A1C9
+Dark Blue: #1E3F57
+Green: #34B3A0
+Red: #F65A5B
+Gray 1: #F1F2F2
+Gray 2: #E6E7E8
+Gray 3: #BCBEC0
+Gray 4: #939598
+*******************/
+
+.new-version > * {
+  z-index: 9999;
+}
+
+.new-version .popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1E3F57;
+  opacity: 0.95;
+}
+
+.new-version .popup-close {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-version .popup {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  width: 400px;
+  height: 230px;
+  background-color: #FAFAFA;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  padding: 15px;
+  margin: -115px 0 0 -200px;
+}
+
+.new-version .popup h1 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0px;
+  margin: 21px 0px;
+}
+
+.new-version .popup a {
+  color: #F65A5B;
+}
+
+.new-version .popup a:hover {
+  text-decoration: underline;
+}
+
+.nano__content.content {
+  overflow-y: auto;
+}
+
+footer#footer #footer__main h5 strong {
+  font-weight: bold;
+}
+
+#footer__company__links a:focus {
+  text-decoration: none;
+}
