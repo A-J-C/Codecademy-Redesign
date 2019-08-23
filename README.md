@@ -17,3 +17,9 @@ Enjoy the improvements, we plan on adding many more :)
 Push any new files into the **shared** branch and I will merge them up to the master branch.
 
 [1]: http://discuss.codecademy.com
+
+## Update 
+
+This project is no longer being maintained, due to Codecademy moving onto a new platform.
+
+This repo is for personal use and so isn't set-up for someone forking the code, however if interested please contact me at alexcraig.linkedin@gmail.com
