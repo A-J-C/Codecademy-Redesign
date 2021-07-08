@@ -18,14 +18,14 @@
   "content_scripts": [{
     "run_at": "document_end",
     "all_frames": true,
-    "js": ["jquery-1.11.1.js", "site-updater.js"],
+    "js": ["site-updater.js"],
     "css": ["site-updater.css"],
     "matches": ["*://codecademy.com/*", "*://www.codecademy.com/*"]
   },
   {
     "run_at": "document_end",
     "all_frames": true,
-    "js": ["jquery-1.11.1.js", "forum-updater.js"],
+    "js": ["forum-updater.js"],
     "css": ["forum-updater.css"],
     "matches": ["*://discuss.codecademy.com/*"]
   }]
